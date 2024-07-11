@@ -41,7 +41,7 @@ const Navbar = () => {
                     </div>
                 </div>
             ) : null}
-            navbar
+
         </nav>
     )
 }

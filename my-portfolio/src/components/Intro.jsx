@@ -43,8 +43,30 @@ const Intro = () => {
                                 </button>
                             </div>
                         </div>
+                        <div className="absolute z-10 lg:bottom-12 bottom-4 xl:right-14 lg:right-40 right-8">
+                            <div className="block rounded-full sm:h-20 h-14 w-fit shdaowbtn relative z-10">
+                                <button className="h-full sm:px-6 px-3 border border-black border-solid rounded-full lg:text-[37px] text-[13px] font-bold flex items-center justify-between gap-x-3 relative bg-[#fefdfc] z-10">
+                                    2<span className="text-[13px] flex flex-col items-start leading-none"><span className="material-symbols-outlined">
+                                        stars
+                                    </span></span>on<strong className='text-[#29a587]'>Codechef</strong></button>
+                            </div>
+                        </div>
                     </div>
                 </section>
+                <span className='xl:hidden flex flex-col items-center'>
+                    <p className="text-lg pt-4 pb-4 text-[#262626] dark:text-white lg:w-4/5">I'm a Web developer with a passion for problem-solving.
+                        Experienced in competitive programming and open-source
+                        contribution, I thrive on creating innovative solutions through code.
+                    </p>
+                    <div className="flex items-center w-fit text-[13px] font-bold pt-4">
+                        <span className="block rounded-full h-14 border border-black border-soild shadowbtn">
+                            <button className="bg-transparent dark:text-white h-full font-bold px-10 rounded-full hover:border-2 border soild hover:bg-[#29a587] hover:text-white hover:border-white">
+                                DOWNLOAD CV</button>
+                        </span>
+                        <hr className="w-10 h-[3px] bg-black mr-6" />
+                        <p>MY SKILLS</p>
+                    </div>
+                </span>
             </div>
         </main>
     )
