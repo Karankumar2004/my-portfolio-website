@@ -2,47 +2,83 @@ import React, { useState } from 'react'
 import ThemeSwitch from './ThemeSwitch';
 
 const Navbar = () => {
-    const [dropdown, setDropdown] = useState(false);
-    const showDropdown = () => {
-        setDropdown(!dropdown);
-    };
+
     return (
-        <nav className="w-full lg:h-auto h-[10vh] flex flex-col justify-center items-center fixed z-50 bg-[#f0ebe3] dark:bg[#1f2937]">
-            <div className="w-[95%] h-[10vh] flex justify-between items-baseline pt-2 text-[#12222E] relative">
-                <div className="flex justify-between items-center w-full pt-4">
-                    <img src="/logo.png" alt="" className="w-28 h-5" />
-                    <ThemeSwitch />
+        <header className='flex flex-col h-[70px] shadow-navy'>
+            <nav className="w-full flex items-center px-5 py-5 md:px-10 md:py-5">
+                <div className="mr-4 flex grow-0 items-center justify-between">
+                    <a href="">
+                        <img src="logo.png" alt="" className='w-12 md:w-14' />
+                    </a>
                 </div>
+                <div className="hidden md:flex md:grow md:items-center md:justify-end">
+                    <a href="/#about" className='cursor-pointer text-xl font-medium f mx-2 border-gray-100 hover:bg-gray-50 hover:bg-transparent hover:test-orange-700'>
+                        <div className="flex font-mono text-[14px] px-2">
+                            <p className="text-cyan">01.</p>
+                            <p className="text-lslate pl-2 hover:text-cyan">About</p>
+                        </div>
+                    </a>
+                    <a href="/#skills" className='cursor-pointer text-xl font-medium f mx-2 border-gray-100 hover:bg-gray-50 hover:bg-transparent hover:test-orange-700'>
+                        <div className="flex font-mono text-[14px] px-2">
+                            <p className="text-cyan">02.</p>
+                            <p className="text-lslate pl-2 hover:text-cyan">Skills</p>
+                        </div>
+                    </a>
+                    <a href="/#projects" className='cursor-pointer text-xl font-medium f mx-2 border-gray-100 hover:bg-gray-50 hover:bg-transparent hover:test-orange-700'>
+                        <div className="flex font-mono text-[14px] px-2">
+                            <p className="text-cyan">03.</p>
+                            <p className="text-lslate pl-2 hover:text-cyan">Projects</p>
+                        </div>
+                    </a>
+                    <a href="/#contact" className='cursor-pointer text-xl font-medium f mx-2 border-gray-100 hover:bg-gray-50 hover:bg-transparent hover:test-orange-700'>
+                        <div className="flex font-mono text-[14px] px-2">
+                            <p className="text-cyan">04.</p>
+                            <p className="text-lslate pl-2 hover:text-cyan">Contact</p>
+                        </div>
+                    </a>
+                    <div className="mx-5"></div>
+                    <a href="https://drive.google.com/file/d/1V9ZraLfsu_PGZyiVO_Ojw5klUhgvFAZA/view?usp=sharing" className='px-4 py-[8px] border border-cyan text-cyan-50 rounded-md font-mono hover-bg:[#64ffdb11]'>
+                        <span>Resume</span>
+                    </a>
+                </div>
+                <div className="flex grow transition-all justify-end md:hidden cursor-pointer false"><span className="material-symbols-outlined w-14">
+                    menu
+                </span></div>
+            </nav>
 
-                {dropdown ? (
-                    <div className="text-2xl cursor-pointer text-[#1f2035] ml-6 lg:absolute z-10 top-6 right-0" onClick={showDropdown}>
-                        <span className="material-symbols-outlined text-white">
-                            cancel
-                        </span>
-                    </div>
-                ) : (
-                    <div className="text-2xl cursor-pointer text-[#1f2035] ml-[6px] dark:text-white" onClick={showDropdown}>
-                        <span className="material-symbols-outlined text-[#000]">
-                            menu
-                        </span>
-                    </div>
-                )}
+            <div className=" hidden fixed top-0 right-0 z-10 p-10 w-3/4 h-screen bg-lnavy"><div className="w-full flex justify-end">
+                <button type="button" className="w-6 flex items-center justify-center text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"><span className="sr-only">Close navigation</span><span className="material-symbols-outlined">
+                    close
+                </span></button>
             </div>
-            {dropdown ? (
-                <div className="w-full h-[100vh] lg:w-[512px] absolute lg:top-0 top-[10vh] lg:right-0 bg-[#f0ebe3] dark:bg-[#1f2937] transition ease-in-out duration"
-                    onClick={showDropdown}>
-                    <div className="w-full lg:h-full h-[320px] flex flex-col items-baseline pt-8 gap-4 text-[#12222E]">
-                        <ul className="font-bold text-[22px] px-3 flex flex-col justify-center items-center w-full h-full lg:mt-0 mt-[10vh] gap-y-8">
-                            <a href="#education" className="cursor-pointer text-black no-underline hover:text-[#29a587]">Education</a>
-                            <a href="#project" className="cursor-pointer text-black no-underline hover:text-[#29a587]">Projects</a>
-                            <a href="#about" className="cursor-pointer text-black no-underline hover:text-[#29a587]">About</a>
-                            <a href="#contact" className="cursor-pointer text-black no-underline hover:text-[#29a587]">Contact</a>
-                        </ul>
-                    </div>
-                </div>
-            ) : null}
-
-        </nav>
+                <ul className="space-y-6 my-10 flex flex-col items-center md:hidden">
+                    <a className="cursor-pointer text-xl font-medium mx-2 border-gray-100 hover:bg-gray-50 hover:bg-transparent hover:text-orange-700" href="/#about">
+                        <div className="flex flex-col items-center font-mono text-[20px] py-2">
+                            <p className="text-cyan">01. </p>
+                            <p className="text-lslate hover:text-cyan">About</p>
+                        </div>
+                    </a>
+                    <a className="cursor-pointer text-xl font-medium mx-2 border-gray-100 hover:bg-gray-50 hover:bg-transparent hover:text-orange-700" href="/#skills">
+                        <div className="flex flex-col items-center font-mono text-[20px] py-2">
+                            <p className="text-cyan">02. </p>
+                            <p className="text-lslate hover:text-cyan">Skills</p>
+                        </div>
+                    </a>
+                    <a className="cursor-pointer text-xl font-medium mx-2 border-gray-100 hover:bg-gray-50 hover:bg-transparent hover:text-orange-700" href="/#projects">
+                        <div className="flex flex-col items-center font-mono text-[20px] py-2">
+                            <p className="text-cyan">03. </p>
+                            <p className="text-lslate hover:text-cyan">Projects</p>
+                        </div>
+                    </a>
+                    <a className="cursor-pointer text-xl font-medium mx-2 border-gray-100 hover:bg-gray-50 hover:bg-transparent hover:text-orange-700" href="/#contact">
+                        <div className="flex flex-col items-center font-mono text-[20px] py-2">
+                            <p className="text-cyan">04. </p>
+                            <p className="text-lslate hover:text-cyan">Contact</p>
+                        </div>
+                    </a>
+                </ul>
+            </div>
+        </header>
     )
 }
 
