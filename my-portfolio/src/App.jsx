@@ -2,7 +2,9 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import SideLink from './components/SideLink'
 import Home from './components/Home'
-
+import Project from './components/Project'
+import Skills from './components/Skills'
+import Contact from './components/Contact'
 
 const App = () => {
   return (
@@ -11,10 +13,10 @@ const App = () => {
       <SideLink />
       <div className="px-[25px] md:px-[80px] lg:px-[150px] w-full min-h-screen">
         <Home />
-        {/* <About />
+        {/* <About /> */}
         <Skills />
         <Project />
-        <Contact /> */}
+        <Contact />
       </div>
     </div>
   )

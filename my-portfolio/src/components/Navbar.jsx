@@ -24,7 +24,7 @@ const Navbar = () => {
                             <p className="text-lslate pl-2 hover:text-cyan">Skills</p>
                         </div>
                     </a>
-                    <a href="/#projects" className='cursor-pointer text-xl font-medium f mx-2 border-gray-100 hover:bg-gray-50 hover:bg-transparent hover:test-orange-700'>
+                    <a href="/#project" className='cursor-pointer text-xl font-medium f mx-2 border-gray-100 hover:bg-gray-50 hover:bg-transparent hover:test-orange-700'>
                         <div className="flex font-mono text-[14px] px-2">
                             <p className="text-cyan">03.</p>
                             <p className="text-lslate pl-2 hover:text-cyan">Projects</p>
@@ -64,7 +64,7 @@ const Navbar = () => {
                             <p className="text-lslate hover:text-cyan">Skills</p>
                         </div>
                     </a>
-                    <a className="cursor-pointer text-xl font-medium mx-2 border-gray-100 hover:bg-gray-50 hover:bg-transparent hover:text-orange-700" href="/#projects">
+                    <a className="cursor-pointer text-xl font-medium mx-2 border-gray-100 hover:bg-gray-50 hover:bg-transparent hover:text-orange-700" href="/#project">
                         <div className="flex flex-col items-center font-mono text-[20px] py-2">
                             <p className="text-cyan">03. </p>
                             <p className="text-lslate hover:text-cyan">Projects</p>
